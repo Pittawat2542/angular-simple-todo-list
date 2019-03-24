@@ -1,0 +1,11 @@
+<h1>List Todo!</h1>
+
+<p *ngIf="!todos">No Todo!</p>
+
+<ul *ngIf="todos" class="mat-typography">
+  <li *ngFor="let todo of todos">
+    <h2>{{ todo.title }}</h2>
+    <p>{{ todo.description }}</p>
+    <button (click)="done(todo.id)" mat-raised-button color="warn">Done</button>
+  </li>
+</ul>

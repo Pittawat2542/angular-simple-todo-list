@@ -1,0 +1,23 @@
+<form
+  (ngSubmit)="createTodo()"
+  #f="ngForm"
+  [formGroup]="form"
+>
+  <input
+    formControlName="title"
+    type="text"
+    matInput
+    placeholder="Text"
+    autocomplete="off"
+    required
+  />
+  <input
+    formControlName="description"
+    type="text"
+    matInput
+    placeholder="Description"
+    autocomplete="off"
+    required
+  />
+  <button mat-raised-button color="primary" type="submit">Create New Todo</button>
+</form>

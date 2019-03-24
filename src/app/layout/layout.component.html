@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1 class="mat-typography">Todo list</h1>
+    <a routerLink="/create" mat-raised-button>Create</a>
+    <span class="fill-space"> </span>
+    <button (click)="logout()" mat-raised-button color="warn">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+<form (ngSubmit)="login()" #f="ngForm" [formGroup]="form" *ngIf="!loggedIn">
+  <input
+    formControlName="email"
+    type="text"
+    matInput
+    placeholder="Email"
+    autocomplete="off"
+  />
+  <input
+    formControlName="password"
+    type="password"
+    matInput
+    placeholder="Password"
+    autocomplete="off"
+  />
+  <button mat-raised-button color="primary" type="submit">Login</button>
+</form>
+
+<button *ngIf="loggedIn" (click)="logout()" mat-raised-button color="warn">
+  Logout
+</button>
